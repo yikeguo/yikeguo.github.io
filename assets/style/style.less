@@ -1,0 +1,53 @@
+*{margin: 0;padding: 0;}
+@greyd: #ddd;
+@yellow-light:#ffd590;
+
+.section_title{
+  height: 30px;font-size:16px;line-height: 30px;display: block;margin: 20px 0 10px;position: relative;padding:0 15px;
+  span{
+    border:1px @yellow-light solid;border-radius:4px;display: inline-block;padding: 0 8px;position: relative;z-index: 2;background-color: #fff;color:#e69541;
+    &::after,&::before{
+      content:' ';height: 4px;width: 8px;background-color: #fff;position: absolute;right: -6px;top:8px;
+    }
+    &::before{
+      right: 76px;
+    }
+  }
+  &::after{
+    content:' ';position: absolute;left: 0;top:49%;width: 100%;height: 1px;background-color: @yellow-light;
+  }
+}
+.wrapper{
+  background: url(../images/bgsen.jpg) right bottom;
+  width: 595px;background-color: #fff;margin: auto;position: relative;font-size:14px;line-height:1.6;padding: 10px 0;
+  h4{font-size:14px;margin-top:8px;}
+  .header, .works, .projects{
+    background-color: rgba(250, 250, 250, .9);padding: 10px;
+  }
+}
+.header{
+  .info{
+    .info_inner{
+      padding:5px 10px 10px;overflow: hidden;
+      &::before{content:' ';display: block;background-color: #fff;border-radius: 0 0 8px 0;overflow: hidden;}
+      .base{
+        padding-bottom: 10px;
+        p{
+          display: inline-block;width: 25%;
+        }
+      }
+      >p{
+        width: 50%;float: left;
+      }
+    }
+  }
+}
+.fish{
+  position: fixed;right:0;bottom:0;z-index:0;width: 140px;height: auto;animation: fish_rota 18s infinite;
+}
+
+@keyframes fish_rota{
+  0%{transform: rotate(0);}
+  50%{transform: rotate(-180deg);}
+  100%{transform: rotate(-360deg);}
+}
